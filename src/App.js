@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import KataButton from './Button';
 
 export default class App extends Component {
 
@@ -28,8 +29,12 @@ export default class App extends Component {
     return (
       <div>
         <h1>Valor: {count} </h1>
-        <button onClick=  {this.incrementarContador}>Incrementar</button>
-        <button onClick= {this.disminuirContador}>Disminuir</button>
+        
+        <hr></hr>
+        <KataButton tituloBoton={"pararriba"} accionBoton={this.incrementarContador}></KataButton>
+        <KataButton tituloBoton={"pabajo"} accionBoton={this.disminuirContador}></KataButton>
+        
+        
       </div>  
     );
   }
