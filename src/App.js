@@ -6,15 +6,20 @@ export default class App extends Component {
   constructor(props){
     super(); //manda llamar este mismo metodo pero en el padre , más las cosas que haré a continuación
     this.state= {
-      count: 5
+      count: 1
     }
   }
 
   incrementarContador= () => {
-    this.setState({
-      count: this.state.count + 1
-    })
-
+    if (this.state.count < 10){  
+      this.setState({
+        count: this.state.count + 1
+      })
+    }else{
+      this.setState({
+        count: 0
+      })
+    }
   }
 
    disminuirContador= () => {
