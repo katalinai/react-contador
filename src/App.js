@@ -31,8 +31,8 @@ export default class App extends Component {
         <h1>Valor: {count} </h1>
         
         <hr></hr>
-        <KataButton tituloBoton={"pararriba"} accionBoton={this.incrementarContador}></KataButton>
-        <KataButton tituloBoton={"pabajo"} accionBoton={this.disminuirContador}></KataButton>
+        <KataButton tituloBoton={"pararriba"} accionBoton={this.incrementarContador} colorBoton={"#08AEEA"}></KataButton>
+        <KataButton tituloBoton={"pabajo"} accionBoton={this.disminuirContador} colorBoton={"#2AF598"}></KataButton>
         
         
       </div>  
