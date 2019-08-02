@@ -10,16 +10,21 @@ export default class App extends Component {
   }
 
   incrementarContador= () => {
-    alert("incrementar")
+    this.setState({
+      count: this.state.count + 1
+    })
+
   }
 
    disminuirContador= () => {
-    alert("disminuir")
+    this.setState({
+      count: this.state.count - 1 
+    })
   }
 
-  render() {
+  render() { 
     
-    let {count} = this.state
+    let {count} = this.state //hacemos un  destructuring
     return (
       <div>
         <h1>Valor: {count} </h1>
