@@ -5,15 +5,27 @@ export default class App extends Component {
   constructor(props){
     super(); //manda llamar este mismo metodo pero en el padre , más las cosas que haré a continuación
     this.state= {
-      saludo: "hola mundo desde el estado"
+      count: 5
     }
+  }
+
+  incrementarContador= () => {
+    alert("incrementar")
+  }
+
+   disminuirContador= () => {
+    alert("disminuir")
   }
 
   render() {
     
-    let { saludo } = this.state
+    let {count} = this.state
     return (
-        <h1>{saludo}</h1>
+      <div>
+        <h1>Valor: {count} </h1>
+        <button onClick=  {this.incrementarContador}>Incrementar</button>
+        <button onClick= {this.disminuirContador}>Disminuir</button>
+      </div>  
     );
   }
 
